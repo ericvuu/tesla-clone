@@ -87,11 +87,11 @@ function App() {
           desc=""
           descLink=""
           backgroundImg={Accessories}
-          leftBtnTxt="ORDER NOW"
+          leftBtnTxt="SHOP NOW"
           leftBtnLink=""
-          rightBtnTxt="LEARN MORE"
+          rightBtnTxt=""
           rightBtnLink=""
-          twoButtons="false"
+          twoButtons={false}
         />
       </div>
     </div>
