@@ -42,9 +42,31 @@
 }
 
 .item__expand{
-  color: white;
+  color: black;
   width: 100%;
   margin-top: 3%;
   justify-content: center;
   text-align: center;
+}
+
+.item__expand > .MuiSvgIcon-root {
+  font-size: 50px;
+  font-weight: bold;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+	40% {
+    transform: translateY(-12px);
+  }
+	60% {
+   transform: translateY(-10px);
+  }
+}
+
+.bounce {
+  animation: (bounce 1s infinite);
 }

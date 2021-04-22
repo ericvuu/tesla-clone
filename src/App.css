@@ -7,3 +7,7 @@
   overflow: auto;
   height: 100vh;
 }
+
+.header__link--hidden {
+  visibility: hidden;
+}

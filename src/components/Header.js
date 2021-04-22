@@ -1,8 +1,11 @@
 import React from 'react'
 import './Header.css'
 import TeslaLogo from '../assets/teslaLogoSmall.svg';
+import MenuIcon from '@material-ui/icons/Menu'
+import CloseIcon from '@material-ui/icons/Close'
 
-const Header = () => {
+
+const Header = ({isMenuOpen, setIsMenuOpen}) => {
 
   return (
 
@@ -21,8 +24,11 @@ const Header = () => {
       </div>
 
       <div className="header__right">
-        <p>Shop</p>
-        <p>Tesla Account</p>
+        <p className={isMenuOpen && 'header__link--hidden'}>Shop</p>
+        <p className={isMenuOpen && 'header__link--hidden'}>Tesla Account</p>
+        <div className="header__menu" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          {isMenuOpen ? <CloseIcon/> : <MenuIcon/>}
+        </div>
       </div>
 
     </div>

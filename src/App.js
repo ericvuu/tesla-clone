@@ -1,6 +1,8 @@
+import React, { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Item from './components/Item';
+import Menu from './components/Menu';
 
 import ModelY from './assets/Desktop-ModelY.jpeg'
 import SolarPanels from './assets/Desktop-SolarPanels.jpeg'
@@ -11,9 +13,13 @@ import ModelX from './assets/Desktop-ModelX.jpeg'
 import SolarRoof from './assets/Desktop-SolarRoof.jpeg'
 
 function App() {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className="App">
-      <Header />
+      <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      {isMenuOpen && <Menu/> }
       <div className="app__itemsContainer">
         <Item
           title="Model S"
