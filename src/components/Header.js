@@ -8,7 +8,6 @@ import CloseIcon from '@material-ui/icons/Close'
 const Header = ({isMenuOpen, setIsMenuOpen}) => {
 
   return (
-
     <div className="header">
       <div className="header__logo">
         <img src={TeslaLogo} alt='Tesla Logo'/>
@@ -30,7 +29,6 @@ const Header = ({isMenuOpen, setIsMenuOpen}) => {
           {isMenuOpen ? <CloseIcon/> : <MenuIcon/>}
         </div>
       </div>
-
     </div>
   )
 }
